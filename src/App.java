@@ -6,7 +6,7 @@ public class App {
         String currentDate = year + "-" + month + "-" + day;
         System.out.println("Please enter your birthdate.");
         System.out.println();
-        System.out.println("Current date:")
+        System.out.println("Birthday:");
         System.out.println(currentDate);
     }
 }
