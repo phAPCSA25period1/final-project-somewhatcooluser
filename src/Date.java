@@ -10,9 +10,14 @@ public class Date {
         day = 1;
     }
 
-    public void addToDate()
+    public void addToDate(int number)
     {
         // test choosing either year, month, or day
-        year = 10 + year;
+        year = year + number;
+    }
+
+    public void subtractToDate(int number)
+    {
+        year = year - number;
     }
 }
