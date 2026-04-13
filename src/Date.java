@@ -20,4 +20,9 @@ public class Date {
     {
         year = year - number;
     }
+
+    public String getDate()
+    {
+        return year + "-" + month + "-" + day;
+    }
 }
