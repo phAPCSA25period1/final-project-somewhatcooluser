@@ -10,15 +10,39 @@ public class Date {
         day = 1;
     }
 
-    public void addToDate(int number)
+    public void addToDate(String choice)
     {
         // test choosing either year, month, or day
-        year = year + number;
+        int theTotal = RollDice.Roll();
+        if (choice.equals("year"))
+        {
+            year = year + theTotal;
+        }
+        else if (choice.equals("month"))
+        {
+            month = month + theTotal;
+        }
+        else if (choice.equals("day"))
+        {
+            day = day + theTotal;
+        }
     }
 
-    public void subtractToDate(int number)
+    public void subtractToDate(String choice)
     {
-        year = year - number;
+        int theTotal = RollDice.Roll();
+        if (choice.equals("year"))
+        {
+            year = year - theTotal;
+        }
+        else if (choice.equals("month"))
+        {
+            month = month - theTotal;
+        }
+        else if (choice.equals("day"))
+        {
+            day = day - theTotal;
+        }
     }
 
     public String getDate()
