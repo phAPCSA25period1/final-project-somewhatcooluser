@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Scanner;
 
 public class App {
@@ -17,8 +16,15 @@ public class App {
             System.out.println("Birthday:");
             System.out.println(theDate.getDate());
             System.out.println();
-            System.out.println("Would you like to change the year, month, or day?");
+            System.out.println("Would you like to change the year, month, or day? If your done, type done.");
             String answer = input.nextLine();
+
+            if (answer.equals("done"))
+            {
+                isDone = false;
+                continue;
+            }
+
             System.out.println();
             System.out.println("Would you like to add or subtract from the " + answer + "?");
             String answer2 = input.nextLine();
