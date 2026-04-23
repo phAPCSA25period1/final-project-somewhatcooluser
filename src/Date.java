@@ -2,18 +2,21 @@ public class Date {
     private int year;
     private int month;
     private int day;
+    private int rollCount;
 
     public Date()
     {
         year = 1990;
         month = 1;
         day = 1;
+        rollCount = 0;
     }
 
     public void addToDate(String choice)
     {
         // test choosing either year, month, or day
         int theTotal = RollDice.Roll();
+        rollCount++;
         if (choice.equals("year"))
         {
             year = year + theTotal;
@@ -46,9 +49,16 @@ public class Date {
     public void subtractToDate(String choice)
     {
         int theTotal = RollDice.Roll();
+        rollCount++;
         if (choice.equals("year"))
         {
             year = year - theTotal;
+            // edge case for if the year goes below 1000
+            if (year < 1000)
+            {
+                year = 1990;
+            }
+
         }
         else if (choice.equals("month"))
         {
@@ -57,6 +67,11 @@ public class Date {
             {
                 month = month + 12;
                 year = year - 1;
+            }
+            // another edge case for if the year goes below 1000
+            if (year < 1000)
+            {
+                year = 1990;
             }
         }
         else if (choice.equals("day"))
@@ -72,11 +87,21 @@ public class Date {
                     year = year - 1;
                 }
             }
+            // yet another edge case for if the year goes below 1000
+            if (year < 1000)
+            {
+                year = 1990;
+            }
         }
     }
 
     public String getDate()
     {
         return year + "-" + month + "-" + day;
+    }
+
+    public int getRollCount()
+    {
+        return rollCount;
     }
 }

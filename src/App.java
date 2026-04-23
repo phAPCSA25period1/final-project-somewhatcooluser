@@ -21,8 +21,19 @@ public class App {
 
             if (answer.equals("done"))
             {
-                isDone = false;
-                continue;
+                System.out.println();
+                System.out.println("Thank you for confirming your birthdate! Your final birthdate is " + theDate.getDate() + ", which took you " + theDate.getRollCount() + " rolls.");
+                System.out.println("Would you like to play again? (yes or no)");
+                String answer3 = input.nextLine();
+                if (answer3.equals("no"))
+                {
+                    System.out.println("Thank you for playing! Goodbye!");
+                    isDone = false;
+                    break;
+                }
+                // Check this later
+                // isDone = false;
+                // continue;
             }
 
             System.out.println();
