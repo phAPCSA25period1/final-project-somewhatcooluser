@@ -6,7 +6,7 @@ public class Date {
 
     public Date()
     {
-        year = (int)(Math.random() * 1100) + 900; // figure this out later
+        year = (int)(Math.random() * 201) + 1900; // generates a random year between 1900 and 2100
         month = (int)(Math.random() * 12) + 1;
         day = (int)(Math.random() * 31) + 1;
         rollCount = 0;
