@@ -27,13 +27,19 @@ public class App {
                 String answer3 = input.nextLine();
                 if (answer3.equals("no"))
                 {
+                    System.out.println();
                     System.out.println("Thank you for playing! Goodbye!");
                     isDone = false;
                     break;
                 }
-                // Check this later
-                // isDone = false;
-                // continue;
+                else if (answer3.equals("yes"))
+                {
+                    System.out.println();
+                    System.out.println("Please enter your birthdate.");
+                    System.out.println();
+                    theDate = new Date();
+                    continue;
+                }
             }
 
             System.out.println();
