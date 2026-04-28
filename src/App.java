@@ -8,7 +8,7 @@ public class App {
         boolean isDone = true;
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter your birthdate.");
+        System.out.println("Please enter your birthdate. Please note that each month has 31 days for simplicity.");
         System.out.println();
 
         while(isDone)
@@ -35,7 +35,7 @@ public class App {
                 else if (answer3.equals("yes"))
                 {
                     System.out.println();
-                    System.out.println("Please enter your birthdate.");
+                    System.out.println("Please enter your birthdate. Please note that each month has 31 days for simplicity.");
                     System.out.println();
                     theDate = new Date();
                     continue;
@@ -56,9 +56,5 @@ public class App {
                 theDate.subtractToDate(answer);
             }
         }
-
-        // test stuff goes here
-        // int test = RollDice.Roll();
-        // System.out.println(test);
     }
 }

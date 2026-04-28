@@ -6,15 +6,15 @@ public class Date {
 
     public Date()
     {
-        year = 1990;
-        month = 1;
-        day = 1;
+        year = (int)(Math.random() * 1100) + 900; // figure this out later
+        month = (int)(Math.random() * 12) + 1;
+        day = (int)(Math.random() * 31) + 1;
         rollCount = 0;
     }
 
     public void addToDate(String choice)
     {
-        // test choosing either year, month, or day
+        // for simplicity, we are going to assume that all months have 31 days and that there are no leap years
         int theTotal = RollDice.Roll();
         rollCount++;
         if (choice.equals("year"))
