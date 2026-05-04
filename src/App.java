@@ -7,6 +7,9 @@ public class App {
         Date theDate = new Date();
         boolean isDone = true;
         Scanner input = new Scanner(System.in);
+        int[] tries = new int[10];
+        int[] tries2 = new int[10];
+        int[][] triesList = {tries, tries2};
 
         System.out.println("Please enter your birthdate. Please note that each month has 31 days for simplicity.");
         System.out.println();
