@@ -7,9 +7,9 @@ public class App {
         Date theDate = new Date();
         boolean isDone = true;
         Scanner input = new Scanner(System.in);
-        int[] tries = new int[10];
-        int[] tries2 = new int[10];
-        int[][] triesList = {tries, tries2};
+        String[] score = new String[1];
+        String[] tries = new String[10];
+        String[][] triesList = {score, tries};
 
         System.out.println("Please enter your birthdate. Please note that each month has 31 days for simplicity.");
         System.out.println();
@@ -26,6 +26,9 @@ public class App {
             {
                 System.out.println();
                 System.out.println("Thank you for confirming your birthdate! Your final birthdate is " + theDate.getDate() + ", which took you " + theDate.getRollCount() + " rolls.");
+                System.out.println();
+                Leaderboard.displayLeaderboard(triesList);
+                System.out.println();
                 System.out.println("Would you like to play again? (yes or no)");
                 String answer3 = input.nextLine();
                 if (answer3.equals("no"))
