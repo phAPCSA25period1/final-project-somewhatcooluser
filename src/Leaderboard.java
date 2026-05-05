@@ -2,10 +2,9 @@ public class Leaderboard {
 
     public static void displayLeaderboard(String[][] theList)
     {
-        System.out.println("Leaderboard:");
-        for (int i = 0; i < theList.length; i++)
+        for (int i = 0; i < theList[0].length; i++)
         {
-            System.out.println("Player " + (i + 1) + ": " + theList[i][0] + " rolls");
+            System.out.println("Attempt " + (i + 1) + ": " + theList[0][i]);
         }
     }
 

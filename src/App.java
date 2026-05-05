@@ -3,14 +3,16 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        // Initialize objects
+        // Initialize objects and variables
         Date theDate = new Date();
         boolean isDone = true;
         Scanner input = new Scanner(System.in);
         String[] score = new String[1];
         String[] tries = new String[10];
-        String[][] triesList = {score, tries};
+        String[][] triesList = {tries, score};
+        int counter = 0;
 
+        score[0] = "      Score:";
         System.out.println("Please enter your birthdate. Please note that each month has 31 days for simplicity.");
         System.out.println();
 
@@ -24,9 +26,15 @@ public class App {
 
             if (answer.equals("done"))
             {
+                // Add score to triesList
+                tries[counter] = Integer.toString(theDate.getRollCount());
+                counter++;
                 System.out.println();
                 System.out.println("Thank you for confirming your birthdate! Your final birthdate is " + theDate.getDate() + ", which took you " + theDate.getRollCount() + " rolls.");
                 System.out.println();
+                System.out.println("Leaderboard:");
+                System.out.println();
+                System.out.println(score[0]);
                 Leaderboard.displayLeaderboard(triesList);
                 System.out.println();
                 System.out.println("Would you like to play again? (yes or no)");
