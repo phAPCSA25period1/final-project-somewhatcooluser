@@ -8,4 +8,12 @@ public class Leaderboard {
         }
     }
 
+    public static void resetLeaderboard(String[] theArray)
+    {
+        for (int i = 0; i < theArray.length; i++)
+        {
+            theArray[i] = null;
+        }
+    }
+
 }

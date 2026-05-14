@@ -27,8 +27,18 @@ public class App {
             if (answer.equals("done"))
             {
                 // Add score to triesList
-                tries[counter] = Integer.toString(theDate.getRollCount());
-                counter++;
+                if (counter < 10)
+                {
+                    tries[counter] = Integer.toString(theDate.getRollCount());
+                    counter++;
+                }
+                else
+                {
+                    counter = 0;
+                    Leaderboard.resetLeaderboard(tries);
+                    tries[counter] = Integer.toString(theDate.getRollCount());
+                    counter++;
+                }
                 System.out.println();
                 System.out.println("Thank you for confirming your birthdate! Your final birthdate is " + theDate.getDate() + ", which took you " + theDate.getRollCount() + " rolls.");
                 System.out.println();
