@@ -16,4 +16,21 @@ public class Leaderboard {
         }
     }
 
+    public static String getHighScore(String[] theArray)
+    {
+        int highestScore = Integer.MAX_VALUE;
+        for (int i = 0; i < theArray.length; i++)
+        {
+            if (theArray[i] == null)
+            {
+                i++;
+            }
+            else if (Integer.parseInt(theArray[i]) < highestScore)
+            {
+                highestScore = Integer.parseInt(theArray[i]);
+            }
+        }
+        return Integer.toString(highestScore);
+    }
+
 }

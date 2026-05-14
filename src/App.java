@@ -38,6 +38,8 @@ public class App {
                     Leaderboard.resetLeaderboard(tries);
                     tries[counter] = Integer.toString(theDate.getRollCount());
                     counter++;
+                    System.out.println();
+                    System.out.println("Resetting leaderboard...");
                 }
                 System.out.println();
                 System.out.println("Thank you for confirming your birthdate! Your final birthdate is " + theDate.getDate() + ", which took you " + theDate.getRollCount() + " rolls.");
@@ -46,6 +48,8 @@ public class App {
                 System.out.println();
                 System.out.println(score[0]);
                 Leaderboard.displayLeaderboard(triesList);
+                System.out.println();
+                System.out.println("Your high score is: " + Leaderboard.getHighScore(tries));
                 System.out.println();
                 System.out.println("Would you like to play again? (yes or no)");
                 String answer3 = input.nextLine();
