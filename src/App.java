@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * The Main class that manages the game logic.
+ */
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -42,7 +45,7 @@ public class App {
                     System.out.println("Resetting leaderboard...");
                 }
                 System.out.println();
-                System.out.println("Thank you for confirming your birthdate! Your final birthdate is " + theDate.getDate() + ", which took you " + theDate.getRollCount() + " rolls.");
+                System.out.println("Thank you for confirming your birthdate! Your birthdate is " + theDate.getDate() + ", which took you " + theDate.getRollCount() + " rolls.");
                 System.out.println();
                 System.out.println("Leaderboard:");
                 System.out.println();
